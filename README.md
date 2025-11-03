@@ -5,9 +5,9 @@
 
 ---
 
-![Screenshot dell app](./images/Screenshot1.PNG)
-![Screenshot dell app](./images/Screenshot2.PNG)
-![Screenshot dell app](./images/Screenshot3.PNG)
+![Screenshot dell app](./images/screenshot1.png)
+![Screenshot dell app](./images/screenshot2.png)
+![Screenshot dell app](./images/screenshot3.png)
 
 
 
