@@ -1,0 +1,29 @@
+.container{
+
+    display: flex;
+    flex-direction: row; /* proprietà flexbox ( interrompe il flusso della pagina )*/
+    background-color: #222;
+    padding: 10%;
+}
+
+.itemsinistra {
+  
+    width: 50%;
+    background-color: coral;
+    color: rgb(49, 4, 248);
+    padding: 159px;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.itemdestra {
+    
+    flex-grow: inherit;
+    width: 50%;
+    background-color: coral;
+    color: rgb(49, 4, 248);
+    padding: 159px;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
