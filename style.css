@@ -1,35 +1,64 @@
+/* --- Colori e Variabili Globali --- */
+:root {
+    /* Le tue scelte di gradient */
+    --navbar-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Viola/Blu scuro */
+    --footer-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); /* Blu/Viola leggero */
+    
+    /* Colori generali per contrasto */
+    --dark-bg: #1a1a2e; /* Sfondo scuro principale */
+    --card-bg: #2a2a47; /* Sfondo card leggermente più chiaro del BG */
+    --text-light: #f4f4f9;
+    --highlight-color: #0D7CFF; /* Il tuo blu brillante per l'hover */
+}
+
+/* --- Stile Generale --- */
 body {
-    background-color: #6b9dd09e;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding-top: 70px; /* Spazio per la fixed-top navbar */
 }
 
-.pricing-card {
-    border: none;
-    border-radius: 15px;
-    transition: all 0.3s ease;
+a {
+    text-decoration: none;
+    position: relative;
+    transition: all 0.5s;
+    color: inherit;
 }
 
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+/* Effetto Neon/Glow per l'hover sui link */
+a:hover {
+    color: var(--highlight-color);
+    text-shadow: 0 0 10px rgba(13, 124, 255, 0.5), 0 0 20px rgba(13, 124, 255, 0.4);
 }
 
-.pricing-header {
-    border-radius: 15px 15px 0 0;
-    color: white;
+/* --- Navbar Styling --- */
+.navbar-gradient {
+    background: var(--navbar-gradient);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.basic-header {
-    background: linear-gradient(45deg, #3494E6, #EC6EAD);
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-light) !important;
 }
 
-.pro-header {
-    background: linear-gradient(45deg, #614385, #516395);
+.nav-link {
+    color: var(--text-light) !important;
 }
 
-.enterprise-header {
-    background: linear-gradient(45deg, #1D976C, #93F9B9);
+
+/* --- Hero Section --- */
+.hero-1 {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://animeignite.com/wp-content/uploads/2021/06/dataset-original.png'); /* Sfondo anime */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
+/* --- Componenti Custom --- */
 .btn-custom {
     border-radius: 50px;
     padding: 10px 30px;
@@ -38,64 +67,119 @@ body {
     letter-spacing: 1px;
 }
 
+.text-primary-dark {
+    color: #EC6EAD; /* Colore brillante per i titoli interni */
+}
+
+.text-secondary-color {
+     color: #3494E6; /* Colore per i sottotitoli */
+}
+
+.bg-light-gray {
+    background-color: var(--card-bg); 
+}
+
+/* --- Pricing Cards (Abbonamenti) --- */
+.pricing-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text-light);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+}
+
+.pricing-header {
+    border-radius: 15px 15px 0 0;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 20px !important;
+}
+
+/* Colori dei Piani */
+.fan-header {
+    background: linear-gradient(45deg, #3494E6, #EC6EAD);
+}
+
+.otaku-header {
+    background: linear-gradient(45deg, #FFD700, #FF8C00); 
+    border: 3px solid #FFD700;
+}
+
+.sensei-header {
+    background: linear-gradient(45deg, #1D976C, #93F9B9);
+}
+
 .feature-list {
     list-style-type: none;
     padding-left: 0;
+    text-align: left;
 }
 
 .feature-list li {
     padding: 8px 0;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.feature-list li:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 
-/* Hero 1: Image Parallax */
-        .hero-1 {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://animeignite.com/wp-content/uploads/2021/06/dataset-original.png');
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-        }
-
-        .hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);}
-
-        /* Custom styles untuk navbar ke-2 */
-        .navbar-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-            /* Logo styles */
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        a {
-  text-decoration: none;
-  position: relative;
-  transition: all 0.5s;
+/* --- Sezione Contatti e Mappa --- */
+#contact {
+    background-color: #21213e; 
 }
 
-a:hover {
-  color: #0D7CFF;
-  text-shadow: 0 0 10px #0D7CFF, 0 0 20px #0D7CFF, 0 0 30px #0D7CFF, 0 0 40px #0D7CFF;
+.map-container {
+    height: 400px;
+    overflow: hidden;
 }
 
+
+/* --- Card Catalogo Anime (product.html) --- */
+.anime-card {
+    background-color: #21213e; 
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.anime-card:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--highlight-color);
+}
+
+.anime-poster {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+}
+
+.simulcast-badge {
+    animation: pulse 1.5s infinite;
+}
+
+/* Animazione per l'etichetta SIMULCAST */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+
+
+/* --- Footer --- */
 .gradient-footer {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    background: var(--footer-gradient);
+    border-top: 2px solid #8b5cf6;
 }
 
 .social-icon {
@@ -111,7 +195,7 @@ a:hover {
 
 .social-icon:hover {
     transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--highlight-color);
 }
 
 .footer-link {
@@ -121,7 +205,7 @@ a:hover {
 }
 
 .footer-link:hover {
-    color: #ffffff;
+    color: var(--highlight-color);
 }
 
 .newsletter-input {
@@ -136,12 +220,134 @@ a:hover {
 
 .newsletter-input:focus {
     background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
     color: white;
-    box-shadow: none;
+    box-shadow: 0 0 0 0.25rem rgba(13, 124, 255, 0.3);
 }
-.img{
-    width: auto;
-    height: auto;
-    top: 30px;
+
+/* --- ANIMAZIONI PER LE CARD DEGLI ABBONAMENTI (INDEX.HTML) --- */
+
+/* Bordo di evidenziazione per il piano consigliato (Otaku) */
+.border-pro-highlight {
+    /* Utilizza il colore del tuo otaku-header come base */
+    border: 3px solid #FFD700 !important;
+    position: relative;
+    z-index: 2; /* Mantiene la card sopra */
+}
+
+/* Animazione GLOW per la card Otaku */
+.pricing-card.border-pro-highlight:hover {
+    /* Manteniamo l'effetto hover precedente, ma aggiungiamo il glow */
+    transform: translateY(-15px); /* Sposta di più in alto */
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4), 0 0 25px rgba(255, 215, 0, 0.6); 
+    animation: none; /* Disattiva il "respiro" quando si passa il mouse */
+}
+
+/* Animazione di "respiro" (Glow costante) per la card Otaku */
+.pricing-card.border-pro-highlight {
+    animation: gentle-pulse 3s infinite alternate;
+}
+
+@keyframes gentle-pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+}
+
+
+/* Animazione: Jiggle/Shake per il pulsante "Consigliato" */
+.pricing-card.border-pro-highlight .btn-primary {
+    animation: subtle-jiggle 5s ease-in-out infinite;
+    transform-origin: 50% 50%; /* Punto di origine per la scossa */
+}
+
+@keyframes subtle-jiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(-0.5deg);
+    }
+    30% {
+        transform: rotate(0.5deg);
+    }
+    45% {
+        transform: rotate(-0.25deg);
+    }
+    60% {
+        transform: rotate(0.25deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Stile per le card anime (Aggiungi a style.css se necessario) */
+.anime-card {
+    transition: transform 0.3s ease-in-out;
+    background-color: #1a1a1a !important; /* Grigio scuro per lo sfondo */
+    border-radius: 10px;
+}
+.anime-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.anime-img {
+    height: 250px; /* Altezza fissa per coerenza */
+    object-fit: cover; /* Assicura che l'immagine copra l'area senza distorsioni */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* --- STILI SPECIFICI PER PAGINA SU DI NOI (aboutUs.html) --- */
+
+/* Sfondo per la sezione principale di racconto */
+.bg-light-gray {
+    /* Manteniamo un grigio leggermente più chiaro del body scuro */
+    background-color: #2a2a2a !important; 
+}
+
+/* Stile per i box informativi (Missione) */
+.bg-dark-bg {
+    /* Lo sfondo scuro di base del tuo body per contrasto */
+    background-color: #121212 !important; 
+}
+
+/* Migliora l'aspetto dei blocchi di testo interni */
+.p-4.rounded-3.shadow-lg {
+    padding: 3rem !important;
+    border-radius: 15px !important;
+}
+
+/* Colore più chiaro per il testo di supporto, lo rende leggibile ma non dominante */
+.text-light-50 {
+    color: rgba(255, 255, 255, 0.75) !important;
+    line-height: 1.8; /* Migliora la leggibilità dei paragrafi lunghi */
+}
+
+/* Stile per la citazione (blockquote) */
+.blockquote {
+    border-left: 5px solid var(--secondary-color, #f4b400); /* Colore secondario come accento */
+    padding-left: 20px;
+    font-style: italic;
+    margin-top: 3rem;
+}
+
+.blockquote-footer {
+    color: var(--primary-dark, #00b4d8) !important;
+    font-size: 1rem;
+}
+
+/* Icone nella sezione "Missione" */
+.fas {
+    /* Assicurati che le icone FontAwesome siano ben visibili */
+    display: inline-block;
+}
+
+/* Evidenziazione sul Titolo Principale per dargli peso */
+.display-3 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
