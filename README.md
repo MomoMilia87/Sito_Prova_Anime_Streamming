@@ -8,6 +8,9 @@
 ![Screenshot dell app](./images/screenshot1.png)
 ![Screenshot dell app](./images/screenshot2.png)
 ![Screenshot dell app](./images/screenshot3.png)
+![Screenshot dell app](./images/screenshot4.png)
+![Screenshot dell app](./images/screenshot5.png)
+![Screenshot dell app](./images/screenshot6.png)
 
 
 
